@@ -6,7 +6,7 @@ const express = require('express');
 const jwt = require('jsonwebtoken');
 const router = express.Router();
 const User = require("../models/user");
-const Book = require("../models/book");
+const Entry = require("../models/entry");
 
 router.post('/signup', function(req, res) {
   if (!req.body.username || !req.body.password) {
@@ -46,34 +46,36 @@ router.post('/signin', function(req, res) {
   });
 });
 
-router.post('/book', passport.authenticate('jwt', { session: false}), function(req, res) {
+router.post('/entry', passport.authenticate('jwt', { session: false}), function(req, res) {
   let token = getToken(req.headers);
   if (token) {
     console.log(req.body);
-    let newBook = new Book({
-      isbn: req.body.isbn,
-      title: req.body.title,
-      author: req.body.author,
-      publisher: req.body.publisher
+    let newEntry = new Entry({
+      name: req.body.name,
+      email: req.body.email,
+      phone: req.body.phone,
+      servicedate: req.body.servicedate,
+      bike: req.body.bikes,
+      contactme: req.body.contactme
     });
 
-    newBook.save(function(err) {
+    newEntry.save(function(err) {
       if (err) {
-        return res.json({success: false, msg: 'Save book failed.'});
+        return res.json({success: false, msg: 'Save Entry failed.'});
       }
-      res.json({success: true, msg: 'Successful created new book.'});
+      res.json({success: true, msg: 'Successful added to the Calendar.'});
     });
   } else {
     return res.status(403).send({success: false, msg: 'Unauthorized.'});
   }
 });
 
-router.get('/book', passport.authenticate('jwt', { session: false}), function(req, res) {
+router.get('/entry', passport.authenticate('jwt', { session: false}), function(req, res) {
   let token = getToken(req.headers);
   if (token) {
-    Book.find(function (err, books) {
+    Entry.find(function (err, entries) {
       if (err) return next(err);
-      res.json(books);
+      res.json(entries);
     });
   } else {
     return res.status(403).send({success: false, msg: 'Unauthorized.'});
