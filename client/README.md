@@ -1,4 +1,4 @@
-# bicycle-village-service-calendar
+# calendar-client
 
 > A Vue.js project
 
