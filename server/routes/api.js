@@ -50,7 +50,7 @@ router.post('/book', passport.authenticate('jwt', { session: false}), function(r
   let token = getToken(req.headers);
   if (token) {
     console.log(req.body);
-    var newBook = new Book({
+    let newBook = new Book({
       isbn: req.body.isbn,
       title: req.body.title,
       author: req.body.author,
