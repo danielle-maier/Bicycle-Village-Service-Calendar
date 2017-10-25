@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/danielle-maier/Bicycle-Village-Service-Calendar/issues"
   },
-  "homepage": "https://github.com/danielle-maier/Bicycle-Village-Service-Calendar#readme"
+  "homepage": "https://github.com/danielle-maier/Bicycle-Village-Service-Calendar#readme",
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "mongoose": "^4.12.4"
+  }
 }
