@@ -7,7 +7,9 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 const passport = require('passport');
+const api = require('./routes/api');
 
+const app = express();
 const uristring =
   process.env.MONGOLAB_URI ||
   process.env.MONGOHQ_URL ||
@@ -21,17 +23,12 @@ mongoose.connect(uristring, function(err, res) {
   }
 });
 
-const api = require('./routes/api');
-
-const app = express();
-
-// view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
 app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
   next();
 });
 
