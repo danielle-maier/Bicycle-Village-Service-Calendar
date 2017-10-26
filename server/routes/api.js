@@ -37,8 +37,7 @@ router.post('/signin', function(req, res) {
     } else {
       user.comparePassword(req.body.password, function (err, isMatch) {
         if (isMatch && !err) {
-          let payload = {id: user.id,username: user.username,roll: user.roll};
-          let token = jwt.sign(payload, config.secret);
+          let token = jwt.sign(user, config.secret);
           res.json({success: true, token: 'JWT ' + token});
         } else {
           res.status(401).send({success: false, msg: 'Authentication failed. Wrong password.'});
@@ -51,13 +50,12 @@ router.post('/signin', function(req, res) {
 router.post('/entry', passport.authenticate('jwt', { session: false}), function(req, res) {
   let token = getToken(req.headers);
   if (token) {
-    console.log(req.body);
     let newEntry = new Entry({
       name: req.body.name,
       email: req.body.email,
       phone: req.body.phone,
       servicedate: req.body.servicedate,
-      bike: req.body.bikes,
+      bike: req.body.bike,
       contactme: req.body.contactme
     });
 
@@ -74,6 +72,7 @@ router.post('/entry', passport.authenticate('jwt', { session: false}), function(
 
 router.get('/entry', passport.authenticate('jwt', { session: false}), function(req, res) {
   let token = getToken(req.headers);
+  console.log(token);
   if (token) {
     Entry.find(function (err, entries) {
       if (err) return next(err);
