@@ -11,7 +11,7 @@ const api = require('./routes/api');
 
 const app = express();
 const uristring =
-  process.env.MONGOLAB_URI ||
+  process.env.MONGODB_URI ||
   process.env.MONGOHQ_URL ||
   'mongodb://localhost/bv355';
 
