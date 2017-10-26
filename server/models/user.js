@@ -11,6 +11,9 @@ const UserSchema = new Schema({
   password: {
     type: String,
     required: true
+  },
+  roll: {
+    { type: Boolean, default: false}
   }
 });
 

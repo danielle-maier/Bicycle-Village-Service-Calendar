@@ -15,15 +15,15 @@ const EntrySchema = new Schema({
     required: true
   },
   servicedate: {
-    type: String,
+    type: Date,
     required: true
   },
   bikes: {
-    type: String,
+    { type: Number, default: 1 },
     required: true
   },
   contactme: {
-    type: Boolean,
+    { type: Boolean, default: true },
     required: true
   }
 });
