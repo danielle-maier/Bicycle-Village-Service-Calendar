@@ -13,7 +13,8 @@ const UserSchema = new Schema({
     required: true
   },
   roll: {
-    { type: Boolean, default: false}
+    type: Boolean,
+    default: false
   }
 });
 

@@ -19,11 +19,13 @@ const EntrySchema = new Schema({
     required: true
   },
   bikes: {
-    { type: Number, default: 1 },
+    type: Number,
+    default: 1,
     required: true
   },
   contactme: {
-    { type: Boolean, default: true },
+    type: Boolean,
+    default: true,
     required: true
   }
 });
