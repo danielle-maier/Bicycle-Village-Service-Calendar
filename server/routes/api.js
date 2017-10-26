@@ -5,8 +5,8 @@ require('../config/passport')(passport);
 const express = require('express');
 const jwt = require('jsonwebtoken');
 const router = express.Router();
-const User = require("../models/user");
-const Entry = require("../models/entry");
+const User = require('../models/user');
+const Entry = require('../models/entry');
 
 router.post('/signup', function(req, res) {
   if (!req.body.username || !req.body.password) {
@@ -14,7 +14,8 @@ router.post('/signup', function(req, res) {
   } else {
     let newUser = new User({
       username: req.body.username,
-      password: req.body.password
+      password: req.body.password,
+      roll: req.body.roll,
     });
     newUser.save(function(err) {
       if (err) {
@@ -36,7 +37,8 @@ router.post('/signin', function(req, res) {
     } else {
       user.comparePassword(req.body.password, function (err, isMatch) {
         if (isMatch && !err) {
-          let token = jwt.sign(user, config.secret);
+          let payload = {id: user.id,username: user.username,roll: user.roll};
+          let token = jwt.sign(payload, config.secret);
           res.json({success: true, token: 'JWT ' + token});
         } else {
           res.status(401).send({success: false, msg: 'Authentication failed. Wrong password.'});

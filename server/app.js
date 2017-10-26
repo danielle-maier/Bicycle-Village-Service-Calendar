@@ -15,13 +15,12 @@ const uristring =
   process.env.MONGOHQ_URL ||
   'mongodb://localhost/bv355';
 
-mongoose.connect(uristring, function(err, res) {
-  if (err) {
-    console.log(`ERROR connecting to: ${uristring} . ${err}`);
-  } else {
-    console.log(`Succeeded connected to: ${uristring}`);
-  }
+mongoose.connect(uristring, {
+  useMongoClient: true
 });
+
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
