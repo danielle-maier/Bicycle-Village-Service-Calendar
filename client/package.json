@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-event-calendar": "^1.4.13",
+    "vue-router": "^3.0.1",
+    "vue2-datepicker": "^1.5.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
