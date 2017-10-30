@@ -35,7 +35,7 @@
 </template>
 
 <script>
-const url = 'https://bv-shop.herokuapp.com/#/'
+const url = 'https://bv-shop.herokuapp.com/api'
 
 export default {
   name: 'signup',

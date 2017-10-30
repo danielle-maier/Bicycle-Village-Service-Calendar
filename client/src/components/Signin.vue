@@ -5,11 +5,11 @@
         <h2 class="title">Sign In</h2>
         <form @submit.prevent="signIn">
           <div class="field">
-            <label class="label">Username</label>
+            <label class="label">Email</label>
             <div class="control">
-              <input v-model="signInForm.username" class="input" type="text" placeholder="Username">
+              <input v-model="signInForm.email" class="input" type="text" placeholder="Email">
             </div>
-            <!-- <p class="help is-success">This username is available</p> -->
+            <!-- <p class="help is-success">This email is available</p> -->
             <!-- <p class="help is-danger">This email is invalid</p> -->
           </div>
           <div class="field">
@@ -35,15 +35,14 @@
 </template>
 
 <script>
-const url = 'https://moodpix.herokuapp.com'
-// const url = 'http://localhost:5000'
+const url = 'https://bv-shop.herokuapp.com/api'
 
 export default {
   name: 'signin',
   data() {
     return {
       signInForm: {
-        username: '',
+        email: '',
         password: ''
       }
     }
@@ -57,7 +56,7 @@ export default {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          username: this.signInForm.username,
+          email: this.signInForm.email,
           password: this.signInForm.password
         })
       }

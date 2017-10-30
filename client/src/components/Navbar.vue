@@ -3,7 +3,7 @@
     <div class="container">
       <div class="navbar-brand">
         <router-link to="/" class="navbar-item">
-          <img src="../assets/moodpix-logo.png" alt="Moodpix" width="112" height="28">
+          <img src="../assets/logo.png" alt="BV" width="112" height="28">
         </router-link>
         <button class="button navbar-burger" :class="{ 'is-active': mobile }"
         @click="toggleBurger">
