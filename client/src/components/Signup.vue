@@ -42,7 +42,6 @@ export default {
   data() {
     return {
       signUpForm: {
-        username: '',
         email: '',
         password: ''
       }

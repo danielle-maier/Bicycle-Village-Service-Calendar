@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <navbar/>
-    <router-view class="main"/>
-    <foot/>
+    <navbar></navbar>
+    <router-view></router-view>
+    <footer></footer>
   </div>
 </template>
 
@@ -13,7 +13,7 @@ export default {
   name: 'app',
   components: {
     Navbar,
-    Footer
+    Footer,
   }
 }
 

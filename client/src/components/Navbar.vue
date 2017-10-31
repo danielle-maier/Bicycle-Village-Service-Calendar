@@ -7,16 +7,14 @@
         </router-link>
         <button class="button navbar-burger" :class="{ 'is-active': mobile }"
         @click="toggleBurger">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span>Sign In</span>
+          <span>Sign Up</span>
         </button>
       </div>
       <div class="navbar-menu" :class="{ 'is-active': mobile }">
         <div class="navbar-end">
           <router-link to="/signin" v-if="!isSignedIn" class="navbar-item" @click="toggleBurger">Sign In</router-link>
           <router-link to="/signup" v-if="!isSignedIn" class="navbar-item" @click="toggleBurger">Sign Up</router-link>
-          <router-link to="/saved" v-if="isSignedIn" class="navbar-item" @click="toggleBurger">Saved</router-link>
           <div v-if="isSignedIn" class="navbar-item">
             <a class="button is-dark" @click="toggleBurger, logout">Logout</a>
           </div>
