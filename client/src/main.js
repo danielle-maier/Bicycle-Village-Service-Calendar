@@ -9,14 +9,7 @@ import vueEventCalendar from 'vue-event-calendar'
 Vue.use(vueEventCalendar, {locale: 'en',color: '#ec433c'})
 Vue.use(Buefy)
 Vue.config.productionTip = false
-//
-// /* eslint-disable no-new */
-// new Vue({
-//   el: '#app',
-//   router,
-//   template: '<App/>',
-//   components: { App }
-// })
+
 import navbar from './components/navbar'
 import foot from './components/foot'
 
