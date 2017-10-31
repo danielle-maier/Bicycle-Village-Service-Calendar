@@ -11,7 +11,7 @@ Vue.use(Resource)
 Vue.use(Router)
 
 const routes = [
-  { path: '/', component: Customer },
+  { path: '/', component: Shop },
   { path: '/signin', component: Signin },
   { path: '/signup', component: Signup }
 ]

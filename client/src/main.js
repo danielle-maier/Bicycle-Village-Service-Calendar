@@ -6,7 +6,7 @@ import 'buefy/lib/buefy.css'
 import 'vue-event-calendar/dist/style.css'
 import vueEventCalendar from 'vue-event-calendar'
 
-Vue.use(vueEventCalendar, {locale: 'en'})
+Vue.use(vueEventCalendar, {locale: 'en',color: '#ec433c'})
 Vue.use(Buefy)
 Vue.config.productionTip = false
 //

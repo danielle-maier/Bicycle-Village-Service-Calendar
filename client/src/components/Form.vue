@@ -7,7 +7,7 @@
           <div class='field'>
             <label class='label'>Name</label>
             <div class='control'>
-              <input v-model='scheduleForm.name' class='input' type='name' placeholder='Name'>
+              <input v-model='scheduleForm.name' class='input' type='text' placeholder='Name'>
             </div>
           </div>
           <div class='field'>
@@ -19,19 +19,19 @@
           <div class='field'>
             <label class='label'>Phone Number</label>
             <div class='control'>
-              <input v-model='scheduleForm.phone' class='input' type='phone' placeholder='Phone #'>
+              <input v-model='scheduleForm.phone' class='input' type='tel' placeholder='Phone #'>
             </div>
           </div>
           <div class='field'>
-            <label class='label'>Email</label>
+            <label class='label'>Desired Service Date</label>
             <div class='control'>
-              <input v-model='scheduleForm.email' class='input' type='email' placeholder='Email'>
+              <input v-model='scheduleForm.date' class='input' type='date' placeholder='Date'>
             </div>
           </div>
           <div class='field'>
-            <label class='label'>Email</label>
+            <label class='label'>Number of bikes to service</label>
             <div class='control'>
-              <input v-model='scheduleForm.email' class='input' type='email' placeholder='Email'>
+              <input v-model='scheduleForm.bikes' class='input' type='number' placeholder='Number of Bikes'>
             </div>
           </div>
           <div class="field">
