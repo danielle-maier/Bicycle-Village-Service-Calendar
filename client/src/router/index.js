@@ -5,37 +5,18 @@ import Signup from '@/components/Signup'
 import Form from '@/components/Form'
 import Shop from '@/components/Shop'
 import Customer from '@/components/Customer'
+import Resource from 'vue-resource'
 
+Vue.use(Resource)
 Vue.use(Router)
 
+const routes = [
+  { path: '/', component: Customer },
+  { path: '/signin', component: Signin },
+  { path: '/signup', component: Signup }
+]
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'Shop',
-      component: Form
-    },
-    {
-      path: '/signin',
-      name: 'Signin',
-      component: Signin
-    }
-    // ,
-    // {
-    //   path: '/signup',
-    //   name: 'Signup',
-    //   component: Signup
-    // }
-    // ,
-    // {
-    //   path: '/shop',
-    //   name: 'Shop',
-    //   component: Signup
-    // },
-    // {
-    //   path: '/customer',
-    //   name: 'Customer',
-    //   component: Signup
-    // }
-  ]
+  mode: 'history',
+  routes,
+  linkActiveClass: 'is-active'
 })
