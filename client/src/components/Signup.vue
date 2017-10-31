@@ -70,3 +70,9 @@ export default {
   }
 }
 </script>
+<style>
+ .section {
+   background-color: #232323;
+   color: white;
+ }
+</style>

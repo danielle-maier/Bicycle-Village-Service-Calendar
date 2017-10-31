@@ -1,5 +1,7 @@
 <template>
   <section class="section">
+    <h1>Welcome</h1>
+    <br>
     <div class="container">
       <div class="box">
         <h2 class="title">Sign In</h2>
@@ -70,3 +72,14 @@ export default {
   }
 }
 </script>
+<style>
+
+  .section {
+    background-color: #232323;
+    color: white;
+  }
+  h1 {
+    font-size: 3.2em;
+    text-align: center;
+  }
+</style>

@@ -3,7 +3,7 @@
     <div class="container">
       <div class="navbar-brand">
         <router-link to="/" class="navbar-item">
-          <img src="../assets/logo.png" alt="BV" width="112" height="28">
+          <img src="../assets/logo.png" alt="BV" width="112" height="60">
         </router-link>
         <button class="button navbar-burger" :class="{ 'is-active': mobile }"
         @click="toggleBurger">
@@ -48,3 +48,22 @@ export default {
   }
 }
 </script>
+<style>
+  .navbar {
+    background-color: #232323;
+    color: white;
+  }
+  a,
+  a:link,
+  a:active,
+  a:visited,
+  a:hover {
+    color: white;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: grey;
+    text-decoration: underline;
+  }
+</style>

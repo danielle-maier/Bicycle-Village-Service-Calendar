@@ -11,9 +11,12 @@ Vue.use(Resource)
 Vue.use(Router)
 
 const routes = [
-  { path: '/', component: Shop },
+  { path: '/', component: Signin },
   { path: '/signin', component: Signin },
-  { path: '/signup', component: Signup }
+  { path: '/signup', component: Signup },
+  { path: '/shop', component: Shop },
+  { path: '/form', component: Form },
+  { path: '/customer', component: Customer },
 ]
 export default new Router({
   mode: 'history',

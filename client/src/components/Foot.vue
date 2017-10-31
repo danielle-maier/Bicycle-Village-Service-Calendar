@@ -13,3 +13,9 @@ export default {
   name: 'foot'
 }
 </script>
+<style>
+ .footer {
+   background-color: #232323;
+   color: white;
+ }
+</style>
