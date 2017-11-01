@@ -2,6 +2,7 @@
   <section class="section">
     <h1 class="welcome">Welcome</h1>
     <br><br>
+    <p class="please">Service Department Scheduler</p>
     <div class="container">
       <div class="box">
         <h2 class="title">Sign In</h2>

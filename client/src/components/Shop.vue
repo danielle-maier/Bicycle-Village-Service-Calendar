@@ -36,12 +36,12 @@ export default {
         desc: '312-329-8943 - 1 Bike'
       }, {
         date: '2017/11/7',
-        title: 'Milo Aukerman - Milo@descendants.com',
-        desc: '970-697-4832 - 1 Bike'
-      }, {
-        date: '2017/11/7',
         title: 'Jim Lindberg - Jim@pennywisdom.com',
         desc: '310-304-0595 - 1 Bike'
+      }, {
+        date: '2017/11/7',
+        title: 'Milo Aukerman - Milo@descendants.com',
+        desc: '970-697-4832 - 1 Bike'
       }]
     }
   }

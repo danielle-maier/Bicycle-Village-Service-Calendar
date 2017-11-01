@@ -1,5 +1,6 @@
 <template>
   <section class="section">
+    <p class="please">Service Department Scheduler</p>
     <div class="container">
       <div class="box">
         <h2 class="title">New User Sign Up</h2>
@@ -52,6 +53,11 @@ export default {
    background-color: #232323;
    color: white;
    padding-bottom: 150px;
+ }
+ .please {
+   font-size: 1.6em;
+   text-align: center;
+   padding-bottom: 25px;
  }
 
 </style>
