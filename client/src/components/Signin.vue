@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-    <h1>Welcome</h1>
+    <h1 class="welcome">Welcome</h1>
     <br>
     <div class="container">
       <div class="box">
@@ -25,7 +25,7 @@
           </div>
         </form>
       </div
-      <p>New Users please click the sign up link above</p>
+      <p class="please">New Users please click the sign up link above</p>
     </div>
   </section>
 </template>
@@ -71,10 +71,12 @@ export default {
     background-color: #232323;
     color: white;
   }
-  h1 {
+  .welcome {
+    font-size: 3.2em;
     text-align: center;
   }
-  p {
+  .please {
+    font-size: 1.6em;
     text-align: center;
   }
 </style>

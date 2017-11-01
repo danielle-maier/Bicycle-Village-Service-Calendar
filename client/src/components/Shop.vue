@@ -53,8 +53,5 @@ export default {
     background-color: #232323;
     color: white;
   }
-  h1 {
-    font-size: 3.2em;
-    text-align: center;
-  }
+
 </style>
