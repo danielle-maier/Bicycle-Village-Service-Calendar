@@ -11,24 +11,17 @@
             <div class="control">
               <input v-model="signInForm.email" class="input" type="text" placeholder="Email">
             </div>
-            <!-- <p class="help is-success">This email is available</p> -->
-            <!-- <p class="help is-danger">This email is invalid</p> -->
           </div>
           <div class="field">
             <label class="label">Password</label>
             <div class="control">
               <input v-model="signInForm.password" class="input" type="password" placeholder="Password">
             </div>
-            <!-- <p class="help is-success">This username is available</p> -->
-            <!-- <p class="help is-danger">This email is invalid</p> -->
           </div>
           <div class="field is-grouped">
             <div class="control">
               <button class="button is-primary">Submit</button>
             </div>
-            <!-- <div class="control">
-              <button class="button is-link">Cancel</button>
-            </div> -->
           </div>
         </form>
       </div>

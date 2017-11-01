@@ -9,6 +9,7 @@
         @click="toggleBurger">
           <span>Sign In</span>
           <span>Sign Up</span>
+          <span>Log out</span>
         </button>
       </div>
       <div class="navbar-menu" :class="{ 'is-active': mobile }">

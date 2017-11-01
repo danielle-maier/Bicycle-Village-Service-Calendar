@@ -15,6 +15,8 @@ export default {
 </script>
 <style>
  .footer {
+   flex-shrink: 0;
+   padding: 20px;
    background-color: #232323;
    color: white;
  }

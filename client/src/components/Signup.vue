@@ -9,24 +9,17 @@
             <div class="control">
               <input v-model="signUpForm.email" class="input" type="email" placeholder="Email">
             </div>
-            <!-- <p class="help is-success">This username is available</p> -->
-            <!-- <p class="help is-danger">This email is invalid</p> -->
           </div>
           <div class="field">
             <label class="label">Password</label>
             <div class="control">
               <input v-model="signUpForm.password" class="input" type="password" placeholder="Password">
             </div>
-            <!-- <p class="help is-success">This username is available</p> -->
-            <!-- <p class="help is-danger">This email is invalid</p> -->
           </div>
           <div class="field is-grouped">
             <div class="control">
               <button class="button is-primary">Submit</button>
             </div>
-            <!-- <div class="control">
-              <button class="button is-link">Cancel</button>
-            </div> -->
           </div>
         </form>
       </div>
