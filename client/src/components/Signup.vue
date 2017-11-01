@@ -42,6 +42,7 @@ export default {
   },
   methods: {
     signUp() {
+      this.$router.push('/form')
       const settings = {
         method: 'POST',
         headers: {

@@ -45,6 +45,7 @@ export default {
   },
   methods: {
     signIn() {
+      this.$router.push('/shop')
       const settings = {
         method: 'POST',
         headers: {
