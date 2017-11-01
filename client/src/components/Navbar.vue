@@ -52,6 +52,7 @@ export default {
 </script>
 <style>
   .navbar {
+    padding-top: 10px;
     background-color: #232323;
     color: white;
   }

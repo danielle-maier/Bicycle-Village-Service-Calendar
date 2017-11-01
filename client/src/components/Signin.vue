@@ -72,7 +72,7 @@ export default {
     color: white;
   }
   h1 {
-    font-size: 3.6em;
+    font-size: 1em;
     text-align: center;
   }
   span {
