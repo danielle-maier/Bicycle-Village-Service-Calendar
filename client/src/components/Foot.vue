@@ -16,7 +16,7 @@ export default {
 <style>
  .footer {
    flex-shrink: 0;
-   padding: 20px;
+   padding: 35px;
    background-color: #232323;
    color: white;
    font-size: 1em;

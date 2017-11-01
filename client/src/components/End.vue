@@ -1,6 +1,6 @@
 <template>
   <main>
-    <h1 class="thanks">Thank You for Visiting BicycleVillage.com</h1>
+    <br><br><h1 class="thanks">Thank You for Visiting BicycleVillage.com</h1>
     <img class="logo" src="../assets/logo.png" alt="BV Logo">
   </main>
 </template>
@@ -18,7 +18,7 @@ export default {
  }
  .logo {
    padding-top: 150px;
-   padding-bottom: 200px;
+   padding-bottom: 230px;
    display: block;
    margin: auto;
  }

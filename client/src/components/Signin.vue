@@ -1,7 +1,7 @@
 <template>
   <section class="section">
     <h1 class="welcome">Welcome</h1>
-    <br>
+    <br><br>
     <div class="container">
       <div class="box">
         <h2 class="title">Sign In</h2>
@@ -25,7 +25,7 @@
           </div>
         </form>
       </div>
-      <p class="please">New Users please click the sign up link above</p>
+      <br><p class="please">New Users please click the sign up link above</p><br>
     </div>
   </section>
 </template>
@@ -46,23 +46,7 @@ export default {
   methods: {
     signIn() {
       this.$router.push('/shop')
-      const settings = {
-        method: 'POST',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          email: this.signInForm.email,
-          password: this.signInForm.password
-        })
-      }
-      fetch(`${url}/signin`, settings)
-      .then(response => response.json())
-      .then(response => {
-        console.log(response)
-        location.href = '/shop'
-      })
+
     }
   }
 }
@@ -79,5 +63,6 @@ export default {
   .please {
     font-size: 1.6em;
     text-align: center;
+    padding-bottom: 25px;
   }
 </style>

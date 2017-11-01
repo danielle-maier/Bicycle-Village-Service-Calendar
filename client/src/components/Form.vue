@@ -72,26 +72,6 @@ export default {
   methods: {
     sendForm() {
       this.$router.push('/customer')
-      const settings = {
-        method: 'POST',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          name: this.scheduleForm.name,
-          email: this.scheduleForm.email,
-          phone: this.scheduleForm.phone,
-          servicedate: this.scheduleForm.servicedate,
-          bikes: this.servicedate.bikes,
-          contactme: this.servicedate.servicedate
-        })
-      }
-      fetch(`${url}/form`, settings)
-      .then(response => response.json())
-      .then(response => {
-        location.href = '/customer'
-      })
     }
   }
 }

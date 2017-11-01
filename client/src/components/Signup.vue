@@ -2,7 +2,7 @@
   <section class="section">
     <div class="container">
       <div class="box">
-        <h2 class="title">Sign Up</h2>
+        <h2 class="title">New User Sign Up</h2>
         <form @submit.prevent="signUp">
           <div class="field">
             <label class="label">Email</label>
@@ -43,22 +43,6 @@ export default {
   methods: {
     signUp() {
       this.$router.push('/form')
-      const settings = {
-        method: 'POST',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          email: this.signUpForm.email,
-          password: this.signUpForm.password
-        })
-      }
-      fetch(`${url}/signup`, settings)
-      .then(response => response.json())
-      .then(response => {
-        location.href = '/form'
-      })
     }
   }
 }
