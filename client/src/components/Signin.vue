@@ -24,9 +24,9 @@
             </div>
           </div>
         </form>
-      </div>
+      </div
+      <p>New Users please click the sign up link above</p>
     </div>
-    <span>New Users please click the sign up link above</span>
   </section>
 </template>
 
@@ -72,10 +72,9 @@ export default {
     color: white;
   }
   h1 {
-    font-size: 1em;
     text-align: center;
   }
-  span {
+  p {
     text-align: center;
   }
 </style>
