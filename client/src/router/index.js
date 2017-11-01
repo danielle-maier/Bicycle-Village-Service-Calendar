@@ -22,6 +22,7 @@ const routes = [
 ]
 export default new Router({
   mode: 'history',
+  hashbang: false,
   routes,
   linkActiveClass: 'is-active'
 })
