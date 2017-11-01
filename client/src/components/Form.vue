@@ -71,6 +71,7 @@ export default {
   },
   methods: {
     sendForm() {
+      this.$router.push('/customer')
       const settings = {
         method: 'POST',
         headers: {
@@ -86,11 +87,10 @@ export default {
           contactme: this.servicedate.servicedate
         })
       }
-      fetch(`${url}/signin`, settings)
+      fetch(`${url}/form`, settings)
       .then(response => response.json())
       .then(response => {
-        console.log(response)
-        location.href = '/'
+        location.href = '/customer'
       })
     }
   }

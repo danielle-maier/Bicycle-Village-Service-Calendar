@@ -60,7 +60,7 @@ export default {
       .then(response => response.json())
       .then(response => {
         console.log(response)
-        location.href = '/'
+        location.href = '/shop'
       })
     }
   }

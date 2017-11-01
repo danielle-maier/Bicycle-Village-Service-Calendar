@@ -56,8 +56,7 @@ export default {
       fetch(`${url}/signup`, settings)
       .then(response => response.json())
       .then(response => {
-        console.log(response)
-        location.href = '/'
+        location.href = '/form'
       })
     }
   }
@@ -67,6 +66,7 @@ export default {
  .section {
    background-color: #232323;
    color: white;
-   padding-bottom: 100px;
+   padding-bottom: 150px;
  }
+
 </style>
