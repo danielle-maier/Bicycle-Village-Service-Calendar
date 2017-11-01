@@ -26,6 +26,7 @@
         </form>
       </div>
     </div>
+    <span>New Users please click the sign up link above</span>
   </section>
 </template>
 
@@ -66,13 +67,15 @@ export default {
 }
 </script>
 <style>
-
   .section {
     background-color: #232323;
     color: white;
   }
   h1 {
-    font-size: 3.2em;
+    font-size: 3.6em;
+    text-align: center;
+  }
+  span {
     text-align: center;
   }
 </style>

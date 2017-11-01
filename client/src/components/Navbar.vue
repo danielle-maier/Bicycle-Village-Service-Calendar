@@ -16,9 +16,10 @@
         <div class="navbar-end">
           <router-link to="/signin" v-if="!isSignedIn" class="navbar-item" @click="toggleBurger">Sign In</router-link>
           <router-link to="/signup" v-if="!isSignedIn" class="navbar-item" @click="toggleBurger">Sign Up</router-link>
-          <div v-if="isSignedIn" class="navbar-item">
+          <router-link to="/end" v-if="!isSignedIn" class="navbar-item" @click="toggleBurger">Log Out</router-link>
+          <!-- <div v-if="isSignedIn" class="navbar-item">
             <a class="button is-dark" @click="toggleBurger, logout">Logout</a>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
