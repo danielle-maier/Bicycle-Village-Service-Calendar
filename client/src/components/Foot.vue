@@ -19,5 +19,7 @@ export default {
    padding: 20px;
    background-color: #232323;
    color: white;
+   font-size: 1em;
+   font-style: italic;
  }
 </style>

@@ -24,7 +24,7 @@
             </div>
           </div>
         </form>
-      </div
+      </div>
       <p class="please">New Users please click the sign up link above</p>
     </div>
   </section>

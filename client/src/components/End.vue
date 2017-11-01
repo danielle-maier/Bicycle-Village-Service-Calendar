@@ -19,6 +19,8 @@ export default {
  .logo {
    padding-top: 150px;
    padding-bottom: 200px;
+   display: block;
+   margin: auto;
  }
  .thanks {
    color: white;
